@@ -15,7 +15,7 @@ jobs:
 
       - name: Run Tests (optional)
         run: |
-          docker build -t test-image -f Dockerfile .
+          docker build -t test-image -f Dockerfile.dev .
           docker run --rm -e CI=true test-image npm test
 
       - name: Create deployment package
